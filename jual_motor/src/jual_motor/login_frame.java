@@ -127,18 +127,18 @@ public class login_frame extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 204));
+        jPanel2.setBackground(new java.awt.Color(102, 102, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 102, 255));
         jLabel1.setFont(new java.awt.Font("Rockwell Condensed", 1, 24)); // NOI18N
-        jLabel1.setText("GASKEN HAYU MOTOR JAYA ABADI ");
+        jLabel1.setText("HIKARI GARAGE");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addGap(193, 193, 193)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -181,9 +181,7 @@ public class login_frame extends javax.swing.JFrame {
                                     .addComponent(txtKeterangan)
                                     .addComponent(txtUsername))))
                         .addGap(0, 132, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
@@ -224,30 +222,30 @@ public class login_frame extends javax.swing.JFrame {
 
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
         try {
-            // Ambil Data Input dari Users
+            
             String password = new String(txtPassword.getPassword());
             String username = txtUsername.getText();
 
-            // Query untuk get data users
+            
             String sql_get_user = "SELECT * FROM tbl_login where username = '" + username + "'"
             + "AND password = md5('" + password + "')";
 
-            // Proses cek ke database
-            stm = Con.createStatement(); // Harus create Statement setiap ingin akses database
-            Users = stm.executeQuery(sql_get_user); // Melakukan query ke database
-            int baris = 0; // Status
+            
+            stm = Con.createStatement(); 
+            Users = stm.executeQuery(sql_get_user); 
+            int baris = 0; 
             while(Users.next()) {
-                baris = Users.getRow(); // Jika Data hasil query di temukan, maka baris akan berubah menjadi 1
+                baris = Users.getRow(); 
             }
 
-            // Kondisi apakah data login user ada di database atau tidak
+            
             if (baris == 1) {
-                // Jika berhasil
+               
                 JOptionPane.showMessageDialog(null, "Anda Berhasil Login !! sebagai : " + username);
-                dispose(); // Login Page di Tutup
-                new jual_motorFrame().setVisible(true); // Buka PAge Home
+                dispose(); //
+                new datamotor_frame().setVisible(true);
             } else {
-                // Jika Gagal
+                
                 JOptionPane.showMessageDialog(null, "Login Gagal, karena data tidak ditemukan");
             }
 

@@ -40,11 +40,6 @@ public class koneksiMtr {
         }
         return con;
     }
-    /*
-	public static void main (String args[]) {
-		KoneksiMysql kon = new KoneksiMysql ("mahasiswa");
-		Connection c = kon.getConnection();
-	}
-     */
+ 
 
 }

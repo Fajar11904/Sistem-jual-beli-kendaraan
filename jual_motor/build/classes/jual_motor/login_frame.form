@@ -87,10 +87,7 @@
                       </Group>
                       <EmptySpace min="0" pref="132" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="jPanel2" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
           </Group>
@@ -209,7 +206,7 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="33" red="ff" type="rgb"/>
+          <Color blue="ff" green="66" red="66" type="rgb"/>
         </Property>
       </Properties>
 
@@ -217,7 +214,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -242,7 +239,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Rockwell Condensed" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="GASKEN HAYU MOTOR JAYA ABADI "/>
+            <Property name="text" type="java.lang.String" value="HIKARI GARAGE"/>
           </Properties>
         </Component>
       </SubComponents>
